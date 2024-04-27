@@ -10,7 +10,7 @@ package com.mycompany.hospitalmanagment;
  * @author HP
  */
 public class HospitalManagment {
-
+//hello hafsa
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
