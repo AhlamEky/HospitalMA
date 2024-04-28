@@ -40,7 +40,7 @@ public class Rooms extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablerooms = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -152,8 +152,8 @@ public class Rooms extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setText("Statut");
 
-        jTable1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablerooms.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tablerooms.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -164,9 +164,9 @@ public class Rooms extends javax.swing.JFrame {
                 "Num Room", "Type", "Statut"
             }
         ));
-        jTable1.setRowHeight(25);
-        jTable1.setRowMargin(1);
-        jScrollPane1.setViewportView(jTable1);
+        tablerooms.setRowHeight(25);
+        tablerooms.setRowMargin(1);
+        jScrollPane1.setViewportView(tablerooms);
 
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -351,8 +351,8 @@ public class Rooms extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel logoutbtn;
+    private javax.swing.JTable tablerooms;
     // End of variables declaration//GEN-END:variables
 }

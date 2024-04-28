@@ -47,7 +47,7 @@ public class Appointment extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabeAppointements = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -201,8 +201,8 @@ public class Appointment extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabeAppointements.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tabeAppointements.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -213,9 +213,9 @@ public class Appointment extends javax.swing.JFrame {
                 "ID", "Name", "Phone numbre", "Date", "Hour", "ID_Doctor"
             }
         ));
-        jTable1.setRowHeight(25);
-        jTable1.setRowMargin(1);
-        jScrollPane1.setViewportView(jTable1);
+        tabeAppointements.setRowHeight(25);
+        tabeAppointements.setRowMargin(1);
+        jScrollPane1.setViewportView(tabeAppointements);
 
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -232,7 +232,7 @@ public class Appointment extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 153));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Manage Appointement");
+        jLabel2.setText("Manage Appointements");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -423,12 +423,12 @@ public class Appointment extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JLabel logoutbtn;
+    private javax.swing.JTable tabeAppointements;
     // End of variables declaration//GEN-END:variables
 }
