@@ -6,7 +6,7 @@
 package com.mycompany.hospitalmanagment;
 
 public class HospitalManagment {
-//hello hafsa
+//hello bonjour
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
