@@ -4,6 +4,10 @@
  */
 package com.mycompany.hospitalmanagment;
 
+import java.sql.*;
+
+import javax.swing.JOptionPane;
+
 public class login extends javax.swing.JFrame {
 
     public login() {
@@ -69,6 +73,11 @@ public class login extends javax.swing.JFrame {
 
         jPasswordField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Light", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
@@ -81,6 +90,11 @@ public class login extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jButton1.setText("Sign Up");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(163, 217, 236));
 
@@ -153,6 +167,45 @@ public class login extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      try { 
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hospitaldb","root","");
+        String sql = "SELECT * FROM login WHERE username=? AND password=?";
+        PreparedStatement pst = con.prepareStatement(sql);
+        pst.setString(1, jTextField1.getText());
+        pst.setString(2, jPasswordField1.getText());
+        ResultSet rs = pst.executeQuery();
+        if(rs.next()) {
+            // If username and password are correct
+            
+            
+            // Open the Doctors frame
+            Doctors doctorsFrame = new Doctors();
+            doctorsFrame.setVisible(true);
+            this.dispose(); // Close the current login frame
+            
+        } else {
+            // If username and password are incorrect
+            JOptionPane.showMessageDialog(null,"Username and password are Incorrect");
+            jTextField1.setText("");
+            jPasswordField1.setText("");
+        }
+        
+        // Close the database resources
+        rs.close();
+        pst.close();
+        con.close();
+         
+    } catch(Exception e) {
+        JOptionPane.showMessageDialog(null, e);
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

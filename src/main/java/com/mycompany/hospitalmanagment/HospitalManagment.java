@@ -4,10 +4,15 @@
  */
 
 package com.mycompany.hospitalmanagment;
+import javax.swing.*;
 
 public class HospitalManagment {
 //hello bonjour
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
-}
+     public static void main(String[] args) {
+        // Create and display the login interface
+        SwingUtilities.invokeLater(() -> {
+           login login = new login();
+           login.setVisible(true);
+        });
+        }
+     }
