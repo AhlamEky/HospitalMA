@@ -11,8 +11,8 @@ public class HospitalManagment {
      public static void main(String[] args) {
         // Create and display the login interface
         SwingUtilities.invokeLater(() -> {
-           Rooms Rooms = new Rooms();
-           Rooms.setVisible(true);
+           login login = new login();
+           login.setVisible(true);
         });
         }
      }
